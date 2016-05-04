@@ -104,6 +104,7 @@ module Forceps
       full_class_name.split("::").each do |mod|
         puts '*'*50
         puts mod.inspect
+        puts mod
         head = head.const_get(mod)
       end
       head
