@@ -102,6 +102,8 @@ module Forceps
     def remote_class_for(full_class_name)
       head = Forceps::Remote
       full_class_name.split("::").each do |mod|
+        puts '*'*50
+        puts mod.inspect
         head = head.const_get(mod)
       end
       head
